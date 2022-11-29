@@ -1,14 +1,14 @@
 package com.johnthompson.msscbeerservice.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.UUID;

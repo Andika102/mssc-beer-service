@@ -3,15 +3,14 @@ package com.johnthompson.msscbeerservice.bootstrap;
 import com.johnthompson.msscbeerservice.domain.Beer;
 import com.johnthompson.msscbeerservice.repository.BeerRepository;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
-@Component
+//@Component
 public class BeerLoader implements CommandLineRunner {
 
     public static final String BEER_1_UPC = "0631234200036";
-    public static final String BEER_2_UPC = "0631234200019";
+    public static final String BEER_2_UPC = "0631234300019";
     public static final String BEER_3_UPC = "0083783375213";
 
     private final BeerRepository beerRepository;

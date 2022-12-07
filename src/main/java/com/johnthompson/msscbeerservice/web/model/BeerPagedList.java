@@ -8,12 +8,15 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class BeerPageList extends PageImpl<BeerDto> {
+public class BeerPagedList extends PageImpl<BeerDto> implements Serializable {
+
+    static final long serialVersionID = -9223487526375L;
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-    public BeerPageList(
+    public BeerPagedList(
             @JsonProperty("content") List<BeerDto> content,
             @JsonProperty("number") int number,
             @JsonProperty("size") int size,
@@ -29,11 +32,11 @@ public class BeerPageList extends PageImpl<BeerDto> {
     }
 
 
-    public BeerPageList(List<BeerDto> content, Pageable pageable, long total) {
+    public BeerPagedList(List<BeerDto> content, Pageable pageable, long total) {
         super(content, pageable, total);
     }
 
-    public BeerPageList(List<BeerDto> content) {
+    public BeerPagedList(List<BeerDto> content) {
         super(content);
     }
 }
